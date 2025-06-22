@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valley Motel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; color:#333; }
+    header { background:#2C3E50; color:white; padding:20px; text-align:center; }
+    nav a { color:white; margin:0 15px; text-decoration:none; }
+    .hero { background:#ecf0f1; padding:60px 20px; text-align:center; }
+    .hero h1 { margin-bottom:10px; }
+    section { padding:40px 20px; max-width:1000px; margin:auto; }
+    .rooms, .gallery { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+    .room, .gallery-item { flex:1 1 200px; background:#f9f9f9; padding:20px; border-radius:8px; }
+    .booking-form { max-width:500px; margin:auto; }
+    .booking-form input, .booking-form select, .booking-form textarea {
+      width:100%; padding:10px; margin:8px 0; box-sizing:border-box;
+    }
+    footer { background:#2C3E50; color:white; text-align:center; padding:20px; }
+    .btn { display:inline-block; padding:10px 20px; background:#27AE60; color:white; text-decoration:none; border-radius:4px; }
+    .btn:hover { background:#219150; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Valley Motel</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#booking">Book Now</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Welcome to Valley Motel</h1>
+    <p>Your peaceful retreat in the heart of the valley.</p>
+    <a class="btn" href="#booking">Book Your Stay</a>
+  </div>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Valley Motel offers cozy, clean rooms with friendly service and scenic views. Perfect for travelers, families, or weekend escapes. We’re committed to making your stay comfortable and memorable.</p>
+  </section>
+
+  <section id="rooms">
+    <h2>Our Rooms</h2>
+    <div class="rooms">
+      <div class="room">
+        <h3>Standard Room</h3>
+        <p>One queen bed, free Wi-Fi, TV, and private bath.</p>
+      </div>
+      <div class="room">
+        <h3>Deluxe Room</h3>
+        <p>Two double beds, mini-fridge, seating area, and valley view.</p>
+      </div>
+      <div class="room">
+        <h3>Suite</h3>
+        <p>King bed, living area, kitchenette—ideal for families.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <div class="gallery-item"><p>Photo placeholder</p></div>
+      <div class="gallery-item"><p>Photo placeholder</p></div>
+      <div class="gallery-item"><p>Photo placeholder</p></div>
+      <div class="gallery-item"><p>Photo placeholder</p></div>
+    </div>
+  </section>
+
+  <section id="booking">
+    <h2>Book a Room</h2>
+    <div class="booking-form">
+      <form action="https://your-booking-platform.example.com/valleymotel" method="get" target="_blank">
+        <label>Check-in Date:</label>
+        <input type="date" name="checkin" required>
+        <label>Check-out Date:</label>
+        <input type="date" name="checkout" required>
+        <label>Room Type:</label>
+        <select name="room">
+          <option>Standard Room</option>
+          <option>Deluxe Room</option>
+          <option>Suite</option>
+        </select>
+        <label>Number of Guests:</label>
+        <input type="number" name="guests" min="1" max="6" required>
+        <label>Any Special Requests?</label>
+        <textarea name="requests" rows="3"></textarea>
+        <button class="btn" type="submit">Book Now</button>
+      </form>
+      <p>Or <a href="https://your-booking-platform.example.com/valleymotel" target="_blank" class="btn">Book via our partner site</a></p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>📍 123 Valley Road, Your Town, ST 12345<br>
+       📞 (123) 456-7890<br>
+       ✉️ <a href="mailto:info@valleymotel.com">info@valleymotel.com</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Valley Motel. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
