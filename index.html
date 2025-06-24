@@ -36,6 +36,116 @@
 </head>
 <body>
 
+<header>
+  <h1>Valley Motel El Cajon-San Diego</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#booking">Book Now</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Welcome to Valley Motel</h1>
+  <p>Your peaceful retreat in the heart of El Cajon.</p>
+  <a class="btn" href="#booking">Book Your Stay</a>
+</div>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>Valley Motel El Cajon-San Diego offers cozy, clean rooms with friendly service and convenient freeway access. Perfect for travelers, families, or weekend escapes. We’re committed to making your stay comfortable and memorable.</p>
+</section>
+
+<section id="rooms">
+  <h2>Our Rooms</h2>
+  <div class="rooms">
+    <div class="room">
+      <h3>Standard Queen Room</h3>
+      <p>One queen bed, free Wi-Fi, TV, and private bath.</p>
+    </div>
+    <div class="room">
+      <h3>Standard Double Room</h3>
+      <p>Two double beds, great for families or groups.</p>
+    </div>
+    <div class="room">
+      <h3>Deluxe Room</h3>
+      <p>Extra space with upgraded amenities and mini-fridge.</p>
+    </div>
+    <div class="room">
+      <h3>Superior Room</h3>
+      <p>Modern style, premium bedding, and workspace area.</p>
+    </div>
+    <div class="room">
+      <h3>Elite Room</h3>
+      <p>Top-tier comfort, ideal for extended stays. Prices vary daily.</p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <div class="gallery-item"><p>Photo placeholder</p></div>
+    <div class="gallery-item"><p>Photo placeholder</p></div>
+    <div class="gallery-item"><p>Photo placeholder</p></div>
+    <div class="gallery-item"><p>Photo placeholder</p></div>
+  </div>
+</section>
+
+<section id="booking">
+  <h2>Book a Room</h2>
+  <div class="booking-form">
+    <form id="directBookingForm">
+      <label>Check-in Date:</label>
+      <input type="date" name="checkin" required>
+      <label>Check-out Date:</label>
+      <input type="date" name="checkout" required>
+      <label>Room Type:</label>
+      <select name="room">
+        <option>Standard Queen Room</option>
+        <option>Standard Double Room</option>
+        <option>Deluxe Room</option>
+        <option>Superior Room</option>
+        <option>Elite Room</option>
+      </select>
+      <label>Number of Guests:</label>
+      <input type="number" name="guests" min="1" max="6" required>
+      <label>Your Name:</label>
+      <input type="text" name="name" required>
+      <label>Your Email:</label>
+      <input type="email" name="email" required>
+      <label>Phone Number:</label>
+      <input type="tel" name="phone">
+      <label>Special Requests:</label>
+      <textarea name="requests" rows="3"></textarea>
+      <button class="btn" type="submit">Submit Booking Request</button>
+    </form>
+    <div class="confirmation" id="confirmationMessage">
+      Thank you! Your booking request has been submitted. We'll contact you soon.
+    </div>
+  </div>
+</section>
+
+<section id="calendar-section">
+  <h2 style="text-align:center;">Room Availability Calendar</h2>
+  <div id="calendar"></div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>📍 585 N Mollison Ave, El Cajon, CA 92021<br>
+     📞 (619) 442-7761<br>
+     ✉️ <a href="mailto:valleymotelelcajon@gmail.com">valleymotelelcajon@gmail.com</a><br>
+     🗺 <a href="https://maps.app.goo.gl/hLvgUys83NSJth9L7" target="_blank">Find us on Google Maps</a><br>
+     ⏰ Business Hours: 8am - 10pm daily. After-hours assistance available.</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Valley Motel El Cajon-San Diego. All rights reserved.</p>
+</footer>
+
 <div id="popupOverlay"></div>
 <div id="popupForm">
   <h3>Add Room Info</h3>
@@ -57,11 +167,6 @@
     <button class="btn" onclick="closePopup()" style="background:#c0392b; margin-left:10px;">Cancel</button>
   </div>
 </div>
-
-<section id="calendar-section">
-  <h2 style="text-align:center;">Room Availability Calendar</h2>
-  <div id="calendar"></div>
-</section>
 
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js"></script>
 <script>
