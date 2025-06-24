@@ -35,6 +35,15 @@
   </style>
 </head>
 <body>
+  
+<script>
+  const password = prompt("Admin Access: Enter password to view calendar");
+  if (password === "valleymotel123") {
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("calendar-section").style.display = "block";
+    });
+  }
+</script>
 
 <header>
   <h1>Valley Motel El Cajon-San Diego</h1>
