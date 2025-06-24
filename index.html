@@ -34,7 +34,7 @@
       <a href="#rooms">Rooms</a>
       <a href="#gallery">Gallery</a>
       <a href="#booking">Book Now</a>
-      <a href="#calendar-section">Availability</a>
+      <!-- Availability link removed to hide calendar from customers -->
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -156,7 +156,22 @@
         initialView: 'dayGridMonth',
         editable: true,
         selectable: true,
-        events: [] // Add/edit events manually or dynamically later
+        events: [],
+        dateClick: function(info) {
+          const title = prompt('Enter price or note for ' + info.dateStr);
+          if (title) {
+            calendar.addEvent({
+              title: title,
+              start: info.dateStr,
+              allDay: true
+            });
+          }
+        },
+        eventClick: function(info) {
+          if (confirm('Delete this entry: "' + info.event.title + '"?')) {
+            info.event.remove();
+          }
+        }
       });
       calendar.render();
     });
